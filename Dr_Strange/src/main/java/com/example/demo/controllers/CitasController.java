@@ -23,12 +23,12 @@ public class CitasController {
 	CitasRepository repositorio;
 
 	@GetMapping
-	public Collection<Citas> getListadoCitas() {
-		Iterable<Citas> ListadoCitas = repositorio.findAll();
-		return (Collection<Citas>) ListadoCitas;
+	public Collection<Citas> getListCitas() {
+		Iterable<Citas> ListCitas = repositorio.findAll();
+		return (Collection<Citas>) ListCitas;
 	}
 	@PutMapping(value = "/{id}")
-	public Citas editarCita(@PathVariable(name = "id") Long id, @RequestBody Citas citaR) {
+	public Citas editCita(@PathVariable(name = "id") Long id, @RequestBody Citas citaR) {
 		Optional<Citas> citaM = repositorio.findById(id);
 		if (citaM.isPresent()) {
 			Citas act = citaM.get();
@@ -46,20 +46,20 @@ public class CitasController {
 	}
 
 	@DeleteMapping(value = "/{id}")
-	public void borrarCita(@PathVariable(name = "id") Long id) {
+	public void deleteCita(@PathVariable(name = "id") Long id) {
 		repositorio.deleteById(id);
 
 	}
 
 	@GetMapping(value = "/{id}")
-	public Citas getCitas(@PathVariable(name = "id") Long id) {
+	public Citas getCita(@PathVariable(name = "id") Long id) {
 		Optional<Citas> cita = repositorio.findById(id);
-		Citas mostrarr = null;
+		Citas obtenerC = null;
 		if (cita.isPresent()) {
-			mostrarr = cita.get();
+			obtenerC = cita.get();
 
 		}
-		return mostrarr;
+		return obtenerC;
 
 	}
 }
