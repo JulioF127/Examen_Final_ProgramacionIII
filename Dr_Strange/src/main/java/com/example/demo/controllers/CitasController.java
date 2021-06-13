@@ -27,7 +27,6 @@ public class CitasController {
 		Iterable<Citas> ListadoCitas = repositorio.findAll();
 		return (Collection<Citas>) ListadoCitas;
 	}
-
 	@PutMapping(value = "/{id}")
 	public Citas editarCita(@PathVariable(name = "id") Long id, @RequestBody Citas citaR) {
 		Optional<Citas> citaM = repositorio.findById(id);
