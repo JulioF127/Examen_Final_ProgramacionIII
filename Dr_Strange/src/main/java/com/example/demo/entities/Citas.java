@@ -15,16 +15,18 @@ public class Citas {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private Long id;
-	@Column(name = "paciente")
-	private String paciente;
-	@Column(name = "observaciones")
-	private String observaciones;
-	@Column(name = "estado")
-	private String estado;
 	@Column(name = "fecha")
 	private String fecha;
 	@Column(name = "hora")
 	private String hora;
+	@Column(name = "paciente")
+	private String paciente;
+	@Column(name = "estado")
+	private String estado;
+	@Column(name = "observaciones")
+	private String observaciones;
+	
+	
 	public Long getId() {
 		return id;
 	}
