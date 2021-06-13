@@ -33,11 +33,11 @@ public class CitasController {
 		Optional<Citas> citaM = repositorio.findById(id);
 		if (citaM.isPresent()) {
 			Citas act = citaM.get();
-			act.setEstado(citaR.getEstado());
-			act.setPaciente(citaR.getPaciente());
-			act.setObservaciones(citaR.getObservaciones());
 			act.setFecha(citaR.getFecha());
 			act.setHora(citaR.getHora());
+			act.setPaciente(citaR.getPaciente());
+			act.setEstado(citaR.getEstado());
+			act.setObservaciones(citaR.getObservaciones());
 			act.setId(citaR.getId());
 			Citas nuevaCita = repositorio.save(act);
 			return nuevaCita;
