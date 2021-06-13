@@ -35,7 +35,7 @@ public class PacientesController {
 			Pacientes actual = pacienteM.get();
 			actual.setId(pacientesR.getId());
 			actual.setEdad(pacientesR.getEdad());
-			actual.setNombres(pacientesR.getNombres());
+			actual.setNombre(pacientesR.getNombre());
 			Pacientes pacienteModificado = repositorio.save(actual);
 			return pacienteModificado;
 

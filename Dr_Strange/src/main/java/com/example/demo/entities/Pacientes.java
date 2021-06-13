@@ -26,10 +26,10 @@ public class Pacientes {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNombres() {
+	public String getNombre() {
 		return nombre;
 	}
-	public void setNombres(String nombres) {
+	public void setNombre(String nombres) {
 		this.nombre = nombres;
 	}
 		public int getEdad() {
